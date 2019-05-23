@@ -13,10 +13,10 @@ functions:
   method: SendMail
   http: POST
   args:
-    - project@pharbers.com
-    - 123456
-    - smtp.ym.163.com
-    - 465
+  - project@pharbers.com
+  - 123456
+  - smtp.ym.163.com
+  - 465
 #middlewares:
 #- name: NtmCheckTokenMiddleware
 #  create: NewCheckTokenMiddleware
