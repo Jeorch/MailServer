@@ -102,9 +102,9 @@ func (h MailSendHandler) SendMail(w http.ResponseWriter, r *http.Request, _ http
 
 	port, _ := strconv.Atoi(h.Args[3])
 
-	//d := gomail.NewDialer(h.Args[2], port, h.Args[0], h.Args[1])
-	gomail.NewDialer(h.Args[2], port, h.Args[0], h.Args[1])
-
+	d := gomail.NewDialer(h.Args[2], port, h.Args[0], h.Args[1])
+	//gomail.NewDialer(h.Args[2], port, h.Args[0], h.Args[1])
+	d.DialAndSend(m)
 	//if err := d.DialAndSend(m); err != nil {
 	//	response["status"] = "error"
 	//	response["msg"] = "邮件发送失败"
